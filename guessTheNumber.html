@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+</head>
+<body>
+    <script>
+        const guessTheNumber = () =>
+        {
+            let user = 1;
+            let computer = 0;
+            let numOfTime = 0;
+            while(user != computer){
+            user = parseInt(prompt( 'Enter any number of 0 to 3'));
+            if(user >= 0 && user <= 3)
+            {
+                console.log("You are select :",user);
+            }
+            else{
+                console.log('Please select a valid number');
+            }
+            computer = Math.round(Math.random()*3)
+            console.log("Computer select is : ",computer)
+            numOfTime++;
+            if(user == computer)
+            {
+                console.log('Congrats you are win!')
+                console.log('You are guess :',numOfTime,"times")
+            }
+            else{
+                console.log('You are losed')
+            }
+        }
+    }   
+    guessTheNumber();        
+    </script>
+</body>
+</html>

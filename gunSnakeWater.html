@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gunSankeWater</title>
+</head>
+<body>
+    <script>
+        const gswGame = () =>
+        {
+            let user =  prompt('Enter any one : Gun, Snake, Water');
+            user = user.toLowerCase();
+            switch(user)
+            {
+                case "gun":
+                    console.log('You select : Gun')
+                    break;
+
+                case "snake":
+                console.log('You select : Snake')
+                break;
+
+                case "water":
+                console.log('You select : Water')
+                break;
+
+                default:
+                    console.log('Please select valid value')
+            }
+            let c = Math.floor(Math.random()*3);
+            let computer = '';
+            switch(c)
+            {
+                case 0:
+                    computer = 'gun';
+                    console.log('Computer select : Gun')
+                    break;
+
+                case 1:
+                computer = 'snake';
+                console.log('Computer select : Snake')
+                break;
+
+                case 2:
+                computer = 'water';
+                console.log('Computer select : Water')
+                break;
+            }
+            
+            if(user == computer)
+            {
+                console.log('Match is draw');
+            }
+            else if(user == "gun" && computer == "snake" || user == "snake" && computer == "water" || user == "water"  && computer == "gun")
+            {
+                console.log('You win!')
+            }
+            else
+            {
+                console.log('You lose')
+            }
+        }
+        gswGame();
+        gswGame();
+        gswGame();
+        gswGame();
+       
+    </script>
+</body>
+</html>
