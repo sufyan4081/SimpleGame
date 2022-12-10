@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rpsGame</title>
+</head>
+<body>
+    <script>
+        const rpsGame = () =>
+        {
+            let user = parseInt( prompt('Enter value like:'+"\n"+'0 for Rock'+"\n"+'1 for paper'+"\n"+'2 for scissor'))
+            switch(user)
+            {
+                case 0:
+                    console.log('You select : Rock')
+                    break;
+
+                case 1:
+                console.log('You select : Paper')
+                break;
+
+                case 2:
+                console.log('You select : Scissor')
+                break;
+            }
+            let computer = Math.floor(Math.random()*3);
+            switch(computer)
+            {
+                case 0:
+                    console.log('Computer select : Rock')
+                    break;
+
+                case 1:
+                console.log('Computer select : Paper')
+                break;
+
+                case 2:
+                console.log('Computer select : Scissor')
+                break;
+            }
+            
+            if(user == computer)
+            {
+                console.log('Match is draw');
+            }
+            else if(user == 0 && computer == 2 || user == 1 && computer == 0 || user == 2 && computer == 1)
+            {
+                console.log('You win!')
+            }
+            else
+            {
+                console.log('You lose')
+            }
+        }
+        rpsGame();
+    </script>
+</body>
+</html>
